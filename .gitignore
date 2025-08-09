@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Docker
+*.tar
+
+# Kubernetes/Helm local junk
+*.tgz
+
+# Terraform: keep lockfile, ignore local state & cache
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfvars
