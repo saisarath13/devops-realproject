@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: realapp
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/saisarath13/devops-realproject.git
+    targetRevision: main
+    path: app-chart
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: realproject
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
